@@ -51,8 +51,7 @@ def update(attr, old, new):
     
     src.data.update(new_src.data)
     
-carrier_select = CheckboxGroup(labels=available_carriers,
-                               active=[0])
+carrier_select = CheckboxGroup(labels=available_carriers, active=[0])
 carrier_select.on_change('active', update)
 
 src = get_dataset([available_carriers[i] for i in carrier_select.active])
